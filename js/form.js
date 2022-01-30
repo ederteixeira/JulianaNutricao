@@ -5,7 +5,10 @@ botaoAdd.addEventListener("click", function(event){
 
     var form = document.querySelector("#form-add");
     var paciente = obtemPaciente(form);
-    var pacientetr = montaTr(paciente);
+    var pacienteTr = montaTr(paciente);
+
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
 
 });
 
@@ -41,8 +44,6 @@ function montaTr(paciente){
     pacienteTr.appendChild(gorduraTd);
     pacienteTr.appendChild(imcTd);
 
-    var tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
 
     return pacienteTr;
 }
