@@ -8,9 +8,9 @@ body{
 }
 
 header{
-	background-color: #333;
+	background-color: rgb(64, 128, 9);
 	height: 3em;
-	color: #FFF;
+	color: rgb(255, 255, 255);
 	margin-bottom: 1em;
 }
 
@@ -127,6 +127,10 @@ button[disabled=disabled], button:disabled {
 
 .adicionar-paciente{
     margin-top: 30px;
+}
+
+.paciente-invalido{
+	background-color: lightgreen;
 }
 
 .campo-invalido{
