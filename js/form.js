@@ -25,6 +25,7 @@ function obtemPaciente(form){
 
 function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
+    pacienteTr.classList.add("paciente");
 
     var nomeTd = document.createElement("td");
     var pesoTd = document.createElement("td");
@@ -43,7 +44,6 @@ function montaTr(paciente){
     pacienteTr.appendChild(alturaTd);
     pacienteTr.appendChild(gorduraTd);
     pacienteTr.appendChild(imcTd);
-
 
     return pacienteTr;
 }
