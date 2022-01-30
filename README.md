@@ -1,3 +1,3 @@
 ### Alura Curso de Javascript
 
-Site de nutrição!
+Site de nutrição da Juliana!
