@@ -1,28 +1,34 @@
-var paciente = document.querySelector(".paciente");
+var pacientes = document.querySelectorAll(".paciente");
 
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
+for (var i = 0; i < pacientes.length; i++) {
+    var paciente = pacientes[i];
 
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
 
-var tdImc = document.querySelector(".info-imc");
+    var tdPeso = paciente.querySelector(".info-peso");
+    var peso = tdPeso.textContent;
 
-var pesoValido =  true;
-var alturaValida = true;
+    var tdAltura = paciente.querySelector(".info-altura");
+    var altura = tdAltura.textContent;
 
-if(peso <= 0 || peso > 1000){
-    pesoValido = false;
-    tdImc.textContent = "Peso inválido";
-}
+    var tdImc = document.querySelector(".info-imc");
 
-if(altura <= 0 || altura > 3.00){
-    alturaValida = false;
-    tdImc.textContent = "Altura inválida";
-}
+    var pesoValido = true;
+    var alturaValida = true;
 
-if(pesoValido && alturaValida){
-    var imc = peso / (altura*altura);
+    if (peso <= 0 || peso > 1000) {
+        pesoValido = false;
+        tdImc.textContent = "Peso inválido";
+    }
 
-    tdImc.textContent = imc;
+    if (altura <= 0 || altura > 3.00) {
+        alturaValida = false;
+        tdImc.textContent = "Altura inválida";
+    }
+
+    if (pesoValido && alturaValida) {
+        var imc = peso / (altura * altura);
+        tdImc.textContent = imc;
+    }
+
+
 }
