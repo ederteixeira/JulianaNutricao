@@ -51,10 +51,10 @@ function montaTd(dado, classe){
     return td;
 }
 
-function validaPaciente(){
-    if(validaPeso(paciente.peso)){
+function validaPaciente(paciente) {
+    if (validaPeso(paciente.peso)) {
         return true;
-    }else{
-        return false; 
-    }      
+    } else {
+        return false;
+    } 
 }
